@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Menu, Close } from 'grommet-icons';
 import { Box, Image } from 'grommet';
 import logo from '../logo.png';
+import {Link} from 'react-router-dom'
 
 export function NavBar({ handleMenuClick, sideBarIsOut }) {
 	return (
@@ -13,17 +14,18 @@ export function NavBar({ handleMenuClick, sideBarIsOut }) {
 					) : (
 						<Menu color="plain" size="large" style={{ marginTop: 27 }} onClick={handleMenuClick} />
 					)}
-					<div
+				<Link to='/'>
+				<div
 						style={{
 							fontSize: 'large',
 							fontWeight: 'bolder',
 							marginTop: 13,
-							width: '80%',
+							width: '87%',
 							textAlign: 'center'
 						}}
 					>
 						<Image src={logo} style={{ width: 'inherit' }} />
-					</div>
+					</div></Link>
 				</div>
 			</Box>
 		</Box>

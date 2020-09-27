@@ -5,6 +5,7 @@ import {ContentCard} from './content-card'
 import currentLocationPic from '../current_location.svg'
 import chattingPic from '../chatting.svg'
 import checkPic from '../check.svg'
+import Fade from 'react-reveal/Fade'
 
 export const Body = () => {
 	const images = [
@@ -20,14 +21,16 @@ export const Body = () => {
 
 	return (
 		<Box pad="medium">
-			<Box height="medium" width="medium" overflow="hidden">
+			<Box height="medium" width="medium" overflow="hidden" style={{margin:'auto'}}>
 				{currentImage}
 			</Box>
 			<br/>
 			<Button color='accent-4' label="Order Now" />
+			<Fade>
 			<ContentCard img={currentLocationPic} headline={'Fast and Free Shipping'} body={'Just provide your D.C. address and we\'ll take care of the rest!'}/>
 			<ContentCard img={checkPic} headline={'Premium Quality'} body={'We only carry the BEST quality products to ensure complete satisfaction.'} imgPosition='right'/>
 			<ContentCard img={chattingPic} headline={'Top of Class Customer Service'} body={'We guarantee an awesome experience with responsive customer service.'}/>
+			</Fade>
 		</Box>
 	);
 };
