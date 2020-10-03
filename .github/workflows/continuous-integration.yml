@@ -1,4 +1,4 @@
-name: Node Continuous Integration
+name: WebShop Continuous Integration
 
 on:
   pull_request:

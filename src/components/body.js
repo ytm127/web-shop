@@ -24,7 +24,7 @@ export const Body = () => {
 				{currentImage}
 			</Box>
 			<br />
-			<Link to='/menu'><Button color='accent-4' label="Order Now" style={{ width: '-webkit-fill-available' }} /></Link>
+			<Link to='/web-shop/menu'><Button color='accent-4' label="Order Now" style={{ width: '-webkit-fill-available' }} /></Link>
 			<Fade>
 				<ContentCard img={currentLocationPic} headline={'Fast and Free Shipping'} body={'Just provide your D.C. address and we\'ll take care of the rest!'} />
 				<ContentCard img={checkPic} headline={'Premium Quality'} body={'We only carry the BEST quality products to ensure complete satisfaction.'} imgPosition='right' />
