@@ -17,18 +17,24 @@ function App() {
 	const size = useWindowSize();
 	const [GLOBAL_DATA, SET_GLOBAL_DATA] = useState()
 	useEffect(() => {
-		axios.get('https://api.airtable.com/v0/appcVmzV8dH0kusPN/Assets?maxRecords=3&view=Grid%20view', {
+		// ASSETS fetch
+		const fetchAssets = () => axios.get('https://api.airtable.com/v0/appcVmzV8dH0kusPN/Assets?maxRecords=3&view=Grid%20view', {
 			headers: {
 				'Authorization': 'Bearer key69wK3b34QNruUO'
 			}
 		})
-		.then(res => {
-			SET_GLOBAL_DATA({
-				screenSize: size,
-				assets: res.data
-			})
+		const fetchProducts = async() => axios.get('https://api.airtable.com/v0/appcVmzV8dH0kusPN/Products?maxRecords=50&view=All%20', {
+			headers: {
+				'Authorization': 'Bearer key69wK3b34QNruUO'
+			}
 		})
-		.catch(err => console.error(err))
+		Promise.all([fetchAssets(), fetchProducts()])
+			.then(function (results) {
+				const assets = results[0].data.records;
+				const products = results[1].data.records;
+				console.log(products)
+				SET_GLOBAL_DATA({assets, products, size})
+			});
 	}, [])
 
 	///////////////// APP ///////////////////////

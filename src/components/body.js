@@ -3,9 +3,9 @@ import GlobalContext from '../global-context'
 import { Box, Button } from 'grommet';
 import { useStartSlideshowOnInit, useSetCarouselImages } from '../utils/hooks'
 import { ContentCard } from './content-card'
-import currentLocationPic from '../current_location.svg'
-import chattingPic from '../chatting.svg'
-import checkPic from '../check.svg'
+import currentLocationPic from '../current_location.svg' // remove
+import chattingPic from '../chatting.svg' // remove
+import checkPic from '../check.svg' // remove
 import Fade from 'react-reveal/Fade'
 import { Link } from 'react-router-dom'
 
@@ -16,7 +16,7 @@ export const Body = () => {
 
 	// ON INIT
 	useStartSlideshowOnInit({ setCurrentImage, carouselImages })
-	useSetCarouselImages(GLOBAL?.assets?.records[0]?.fields?.Attachments, setCarouselImages)
+	useSetCarouselImages(GLOBAL?.assets?.[0]?.fields?.Attachments, setCarouselImages)
 
 	return (
 		<Box pad="medium">
