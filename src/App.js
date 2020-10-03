@@ -17,7 +17,6 @@ function App() {
 	const size = useWindowSize();
 	const [GLOBAL_DATA, SET_GLOBAL_DATA] = useState()
 	useEffect(() => {
-		console.log(process.env)
 		// ASSETS fetch
 		const fetchAssets = () => axios.get('https://api.airtable.com/v0/appcVmzV8dH0kusPN/Assets?maxRecords=3&view=Grid%20view', {
 			headers: {

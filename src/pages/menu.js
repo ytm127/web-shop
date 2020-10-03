@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import GlobalContext from '../global-context'
 import { Tab, Tabs, Box, Image, Text } from 'grommet';
-import sourPatch from '../sourpatch.jpeg'
 
 export const Menu = () => {
 	const GLOBAL = useContext(GlobalContext)
@@ -21,7 +20,7 @@ export const Menu = () => {
 					src={url}
 					style={{ height: 360, borderRadius: '50%', border: `${getTypeColor(type)} thick solid` }}
 				/>
-				<div style={{ textAlign: 'center', fontWeight: 'bold', marginTop: 10 }}>{name}</div>
+				<div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20,marginTop: 10 }}>{name} ({type})</div>
 				<div style={{ textAlign: 'center' }}>{notes}</div>
 			</Box>
 		);
@@ -45,7 +44,9 @@ export const Menu = () => {
 				</Tabs>
 			</Tab>
 			<Tab title="Edible"><div style={{ textAlign: 'center' }}>
-				<Image height={300} src={sourPatch} style={{ marginTop: 50 }}></Image></div></Tab>
+				{/* <Image height={300} src={sourPatch} style={{ marginTop: 50 }}></Image> */}
+				</div>
+				</Tab>
 			<Tab title="Misc." />
 		</Tabs>
 	);

@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import { Menu, Close } from 'grommet-icons';
 import { Box, Image } from 'grommet';
-import logo from '../logo.png';
 import {Link} from 'react-router-dom'
+import GlobalContext from '../global-context';
 
 export function NavBar({ handleMenuClick, sideBarIsOut }) {
+	const GLOBAL = useContext(GlobalContext)
+	const logo = GLOBAL?.assets?.[1].fields.Attachments[0].url
+
 	return (
 		<Box pad="medium" background="white">
 			<Box>
