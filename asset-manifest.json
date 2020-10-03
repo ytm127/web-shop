@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/static/js/main.df29ac6e.chunk.js",
-    "main.js.map": "/static/js/main.df29ac6e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ad8c6768.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ad8c6768.js.map",
-    "static/js/2.1f028e01.chunk.js": "/static/js/2.1f028e01.chunk.js",
-    "static/js/2.1f028e01.chunk.js.map": "/static/js/2.1f028e01.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.fea46d4079f4352ac29fd008fccb2567.js": "/precache-manifest.fea46d4079f4352ac29fd008fccb2567.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.5ecd60fb.chunk.css.map": "/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.1f028e01.chunk.js.LICENSE.txt": "/static/js/2.1f028e01.chunk.js.LICENSE.txt",
-    "static/media/chatting.svg": "/static/media/chatting.b6bbd4e7.svg",
-    "static/media/check.svg": "/static/media/check.92e483a7.svg",
-    "static/media/current_location.svg": "/static/media/current_location.8d47d155.svg"
+    "main.css": "/web-shop/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/web-shop/static/js/main.3c4aaf11.chunk.js",
+    "main.js.map": "/web-shop/static/js/main.3c4aaf11.chunk.js.map",
+    "runtime-main.js": "/web-shop/static/js/runtime-main.d12030ab.js",
+    "runtime-main.js.map": "/web-shop/static/js/runtime-main.d12030ab.js.map",
+    "static/js/2.33050396.chunk.js": "/web-shop/static/js/2.33050396.chunk.js",
+    "static/js/2.33050396.chunk.js.map": "/web-shop/static/js/2.33050396.chunk.js.map",
+    "index.html": "/web-shop/index.html",
+    "precache-manifest.e876850f8d998a49bbc46b49433f67b2.js": "/web-shop/precache-manifest.e876850f8d998a49bbc46b49433f67b2.js",
+    "service-worker.js": "/web-shop/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/web-shop/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.33050396.chunk.js.LICENSE.txt": "/web-shop/static/js/2.33050396.chunk.js.LICENSE.txt",
+    "static/media/chatting.svg": "/web-shop/static/media/chatting.b6bbd4e7.svg",
+    "static/media/check.svg": "/web-shop/static/media/check.92e483a7.svg",
+    "static/media/current_location.svg": "/web-shop/static/media/current_location.8d47d155.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ad8c6768.js",
-    "static/js/2.1f028e01.chunk.js",
+    "static/js/runtime-main.d12030ab.js",
+    "static/js/2.33050396.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.df29ac6e.chunk.js"
+    "static/js/main.3c4aaf11.chunk.js"
   ]
 }
