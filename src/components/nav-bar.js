@@ -17,7 +17,7 @@ export function NavBar({ handleMenuClick, sideBarIsOut }) {
 					) : (
 						<Menu color="plain" size="large" style={{ marginTop: 27 }} onClick={handleMenuClick} />
 					)}
-				<Link to='/'>
+				<Link to='/web-shop/'>
 				<div
 						style={{
 							fontSize: 'large',

@@ -47,9 +47,9 @@ function App() {
 				<NavBar handleMenuClick={handleMenuClick} sideBarIsOut={sideBarIsOut} />
 				{sideBarIsOut && <SideBar setSideBarIsOut={setSideBarIsOut} />}
 				<Switch>
-					<Route path="/" component={Home} exact />
-					<Route path="/menu" component={Menu} />
-					<Route path="/how-it-works" component={HowItWorks} />
+					<Route path="/web-shop/" component={Home} exact />
+					<Route path="/web-shop/menu" component={Menu} />
+					<Route path="/web-shop/how-it-works" component={HowItWorks} />
 					<Route component={ErrorPage} />
 				</Switch>
 				<FooterBar />
