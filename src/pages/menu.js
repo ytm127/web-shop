@@ -16,12 +16,12 @@ export const Menu = () => {
 		const notes = item.fields?.Notes
 		const url = item.fields?.Attachments?.[0].url
 		return (
-			<Box pad="large" fill style={{ height: 400, marginBottom: 50, marginTop: isFirstProduct ? '7vh' : 0 }}>
+			<Box pad="large" fill style={{ height: 500, marginBottom: 50, marginTop: isFirstProduct ? '7vh' : 0 }}>
 				<Image
 					src={url}
 					style={{ height: 360, borderRadius: '50%', border: `${getTypeColor(type)} thick solid` }}
 				/>
-				<div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20,marginTop: 10 }}>{name} ({type})</div>
+	<div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 20, marginTop: 10 }}>{name} {type && `(${type})`}</div>
 				<div style={{ textAlign: 'center' }}>{notes}</div>
 			</Box>
 		);
@@ -45,10 +45,12 @@ export const Menu = () => {
 				</Tabs>
 			</Tab>
 			<Tab title="Edible"><div style={{ textAlign: 'center' }}>
-				{/* <Image height={300} src={sourPatch} style={{ marginTop: 50 }}></Image> */}
-				</div>
-				</Tab>
-			<Tab title="Misc." />
+				<div>{GLOBAL?.products?.filter(p => p.fields.Category === 'Edible').map((item, idx) => renderMenuItem(item, idx))}</div>
+			</div>
+			</Tab>
+			<Tab title="Misc.">
+				<div>{GLOBAL?.products?.filter(p => p.fields.Category === 'Misc').map((item, idx) => renderMenuItem(item, idx))}</div>
+			</Tab>
 		</Tabs>
 	);
 };
