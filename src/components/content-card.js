@@ -8,7 +8,7 @@ export const ContentCard = ({ img, imgPosition = 'left',  headline, body }) => {
 				{imgPosition === 'left' ? (
 					<div style={{ display: 'flex' }}>
 						<Image src={img} style={{ width: '40vw', margin: 'auto' }} />
-						<div style={{ marginLeft: 20, textAlign: 'center' }}>
+						<div style={{ marginLeft: 20, textAlign: 'center', width:'40vw' }}>
 							<h3>{headline}</h3>
 							<p style={{ color: 'grey' }}>
 								{body}
@@ -17,7 +17,7 @@ export const ContentCard = ({ img, imgPosition = 'left',  headline, body }) => {
 					</div>
 				) : (
 					<div style={{ display: 'flex' }}>
-						<div style={{ marginRight: 20, textAlign: 'center' }}>
+						<div style={{ marginRight: 20, textAlign: 'center', width:'40vw' }}>
 							<h3>{headline}</h3>
 							<p style={{ color: 'grey' }}>
 								{body}
