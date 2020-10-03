@@ -20,7 +20,7 @@ export const Body = () => {
 
 	return (
 		<Box pad="medium">
-			<Box height="medium" width="medium" overflow="hidden" style={{ margin: 'auto' }}>
+			<Box height="medium" width="medium" overflow="hidden" style={{ margin: 'auto', padding:20 }}>
 				{currentImage}
 			</Box>
 			<br />
