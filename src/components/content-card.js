@@ -9,7 +9,7 @@ export const ContentCard = ({ img, imgPosition = 'left', headline, body }) => {
 					<div style={{ paddingTop: 15 }}>
 						<Image
 							src={img}
-							style={{ width: '33vw', padding:'0px 5px 0px 5px', margin: '0 5px 0 5px', float: 'left', paddingTop: '5vh' }}
+							style={{ width: '32vw', padding:'0px 5px 0px 5px', margin: '0 5px 0 5px', float: 'left', paddingTop: '5vh' }}
 						/>
 						<div style={{ width: '30vw', padding:'0px 5px 0px 5px', float: 'right', margin: '0 5px 0 5px', textAlign:'center' }}>
 							<h3>{headline}</h3>
@@ -22,7 +22,7 @@ export const ContentCard = ({ img, imgPosition = 'left', headline, body }) => {
 							<h3>{headline}</h3>
 							<p style={{ color: 'grey' }}>{body}</p>
 						</div>
-						<Image src={img} style={{ width: '33vw', padding:'0px 5px 0px 5px', margin: '0 5px 0 5px',float: 'right', paddingTop: '5vh' }} />
+						<Image src={img} style={{ width: '32vw', padding:'0px 5px 0px 5px', margin: '0 5px 0 5px',float: 'right', paddingTop: '5vh' }} />
 					</div>
 				)}
 			</div>
