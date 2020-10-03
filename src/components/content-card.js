@@ -9,20 +9,20 @@ export const ContentCard = ({ img, imgPosition = 'left', headline, body }) => {
 					<div style={{ padding: 15 }}>
 						<Image
 							src={img}
-							style={{ width: '30vw', padding: 5, marginRight: 10, float: 'left', paddingTop: '10vh' }}
+							style={{ width: '30vw', padding: 5, margin: 5, float: 'left', paddingTop: '10vh' }}
 						/>
-						<div style={{ width: '30vw', padding: 6, float: 'right' }}>
+						<div style={{ width: '30vw', padding: 5, float: 'right', margin:5, textAlign:'center' }}>
 							<h3>{headline}</h3>
 							<p style={{ color: 'grey' }}>{body}</p>
 						</div>
 					</div>
 				) : (
 					<div style={{ padding: 15 }}>
-						<div style={{ width: '30vw', padding: 6, float: 'left', marginRight: 10 }}>
+						<div style={{ width: '30vw', padding: 5, float: 'left', margin: 5 , textAlign:'center'}}>
 							<h3>{headline}</h3>
 							<p style={{ color: 'grey' }}>{body}</p>
 						</div>
-						<Image src={img} style={{ width: '30vw', padding: 5, float: 'right', paddingTop: '10vh' }} />
+						<Image src={img} style={{ width: '30vw', padding: 5, margin:5,float: 'right', paddingTop: '10vh' }} />
 					</div>
 				)}
 			</div>
