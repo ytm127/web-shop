@@ -17,15 +17,16 @@ function App() {
 	const size = useWindowSize();
 	const [GLOBAL_DATA, SET_GLOBAL_DATA] = useState()
 	useEffect(() => {
+		console.log(process.env)
 		// ASSETS fetch
 		const fetchAssets = () => axios.get('https://api.airtable.com/v0/appcVmzV8dH0kusPN/Assets?maxRecords=3&view=Grid%20view', {
 			headers: {
-				'Authorization': 'Bearer key69wK3b34QNruUO'
+				'Authorization': `Bearer ${process.env?.REACT_APP_AIRTABLE_API_KEY}`
 			}
 		})
 		const fetchProducts = async() => axios.get('https://api.airtable.com/v0/appcVmzV8dH0kusPN/Products?maxRecords=50&view=All%20', {
 			headers: {
-				'Authorization': 'Bearer key69wK3b34QNruUO'
+				'Authorization': `Bearer ${process.env?.REACT_APP_AIRTABLE_API_KEY}`
 			}
 		})
 		Promise.all([fetchAssets(), fetchProducts()])
