@@ -1,4 +1,6 @@
-import react, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Box, Image, Button } from 'grommet';
+
 export function useWindowSize() {
 	// Initialize state with undefined width/height so server and client renders match
 	// Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
@@ -30,19 +32,33 @@ export function useWindowSize() {
 	return windowSize;
 }
 
-export const useStartSlideshowOnInit = ({ setCurrentImage, images }) => {
-	useEffect(() => {
-		let i = 0;
-		setCurrentImage(images[i]);
-		const intv = setInterval(() => {
-			if (images[i]) {
-				setCurrentImage(images[i]);
-			} else i = -1;
-			i += 1;
-		}, 2000);
-
-		setTimeout(() => {
-			clearInterval(intv);
-		}, 60000);
-	}, []);
+export const useStartSlideshowOnInit = ({ setCurrentImage, carouselImages }) => {
+		useEffect(() => {
+			if(carouselImages) {
+			let i = 0;
+			if(carouselImages[i]){
+				setCurrentImage(carouselImages[i]);
+			const intv = setInterval(() => {
+				if (carouselImages[i]) {
+					setCurrentImage(carouselImages[i]);
+				} else i = -1;
+				i += 1;
+			}, 2000);
+	
+	
+			setTimeout(() => {
+				clearInterval(intv);
+			}, 60000);
+			}
+		}}, [carouselImages]);
 };
+
+export const useSetCarouselImages = (assetsData, setCarouselImages ) => {
+	useEffect(()=>{
+		let arr = []
+		for(let i=0; i< assetsData?.length; i++){
+			arr.push(<Image fit='cover' src={`${assetsData[i].url}`}/>)
+		}
+		setCarouselImages(arr)
+	}, [assetsData])
+}
