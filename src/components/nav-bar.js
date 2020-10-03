@@ -22,13 +22,7 @@ export function NavBar({ handleMenuClick, sideBarIsOut }) {
 						style={{
 							fontSize: 'large',
 							fontWeight: 'bolder',
-							marginTop: 13,
-							width: '87%',
-							textAlign: 'center'
-						}}
-					>
-						<Image src={logo} style={{ width: 'inherit' }} />
-					</div></Link>
+						
 				</div>
 			</Box>
 		</Box>
